@@ -1,0 +1,1231 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>VIROSH | Telugu Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Playfair+Display:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    font-family:'Playfair Display',serif;
+    background:#250303;
+    color:#ffe9ae;
+}
+
+/* =========================
+   MAIN SLIDER
+========================= */
+
+.slider{
+    width:100vw;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.slide.active{
+    display:flex;
+    animation:slideIn 1s ease;
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:scale(1.05);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================
+   TRADITIONAL BACKGROUND
+========================= */
+
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:2px solid #d8ad47;
+    border-radius:20px;
+    z-index:2;
+    pointer-events:none;
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:23px;
+    border:1px solid rgba(255,220,120,.65);
+    border-radius:15px;
+    z-index:2;
+    pointer-events:none;
+}
+
+.bg{
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 50% 35%,rgba(255,203,72,.18),transparent 30%),
+      linear-gradient(135deg,#4b0505,#800e0b 50%,#350303);
+}
+
+.content{
+    position:relative;
+    z-index:5;
+    width:min(900px,88%);
+    max-height:88vh;
+    overflow:auto;
+    scrollbar-width:none;
+    padding:25px;
+}
+
+.content::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.toran{
+    font-size:30px;
+    letter-spacing:8px;
+    color:#78a84b;
+    margin-bottom:12px;
+}
+
+.om{
+    font-family:'Yatra One';
+    font-size:90px;
+    color:#ffd45d;
+    text-shadow:0 0 25px rgba(255,201,65,.5);
+}
+
+.ganesha{
+    font-size:58px;
+    margin:5px;
+}
+
+.bells{
+    font-size:30px;
+    letter-spacing:20px;
+    color:#e7b34c;
+}
+
+.flower{
+    position:absolute;
+    font-size:25px;
+    animation:fall 9s linear infinite;
+    z-index:4;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(-10vh) rotate(0);
+        opacity:0;
+    }
+    10%{opacity:1;}
+    100%{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:.1;
+    }
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.telugu{
+    font-family:'Noto Serif Telugu',serif;
+}
+
+.heading{
+    font-family:'Yatra One';
+    font-size:45px;
+    color:#ffd568;
+    margin:12px 0;
+    text-shadow:2px 3px #420303;
+}
+
+.subheading{
+    font-family:'Noto Serif Telugu';
+    font-size:25px;
+    color:#ffe4a0;
+    margin:12px 0;
+}
+
+.gold{
+    color:#ffd86d;
+}
+
+.small{
+    font-size:17px;
+    line-height:1.8;
+    color:#efd69b;
+}
+
+/* =========================
+   SLIDE 1
+========================= */
+
+.opening{
+    background:
+      radial-gradient(circle at center,#7d100d,#430404 65%,#210202);
+}
+
+.opening .content{
+    animation:appear 1.5s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.welcome{
+    font-family:'Noto Serif Telugu';
+    font-size:20px;
+    line-height:2;
+}
+
+.ornament{
+    color:#d9a943;
+    font-size:28px;
+    margin:15px;
+}
+
+/* =========================
+   COUPLE
+========================= */
+
+.couple-name{
+    font-family:'Yatra One';
+    font-size:clamp(38px,7vw,70px);
+    color:#ffe29a;
+    text-shadow:3px 4px #570606;
+}
+
+.and{
+    font-size:30px;
+    color:#d4a33b;
+    margin:5px;
+}
+
+.virosh{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 35px;
+    border:1px solid #e0b34c;
+    border-radius:50px;
+    font-family:'Yatra One';
+    font-size:27px;
+    color:#ffd564;
+    background:rgba(255,200,60,.07);
+    box-shadow:0 0 20px rgba(255,200,60,.15);
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo{
+    width:min(300px,70vw);
+    height:350px;
+    object-fit:cover;
+    display:block;
+    margin:20px auto;
+    padding:8px;
+    border-radius:150px 150px 20px 20px;
+    background:linear-gradient(135deg,#ffe083,#9b681d,#e7b849);
+    box-shadow:0 0 0 5px #480404,0 0 0 7px #d5a63e;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.date{
+    font-size:48px;
+    font-weight:bold;
+    letter-spacing:8px;
+    color:#ffda68;
+    margin:20px;
+}
+
+.location{
+    font-family:'Noto Serif Telugu';
+    font-size:28px;
+    color:#ffe5a0;
+}
+
+/* =========================
+   TRADITION CARDS
+========================= */
+
+.tradition-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.tradition-card{
+    padding:20px 10px;
+    border:1px solid #c99d3c;
+    border-radius:15px;
+    background:rgba(255,205,75,.06);
+    min-height:140px;
+    transition:.3s;
+}
+
+.tradition-card:hover{
+    transform:translateY(-5px);
+    background:rgba(255,205,75,.12);
+}
+
+.tradition-card .icon{
+    font-size:42px;
+    margin-bottom:8px;
+}
+
+.tradition-card h3{
+    font-family:'Noto Serif Telugu';
+    color:#ffd76b;
+    font-size:18px;
+}
+
+.tradition-card p{
+    font-size:13px;
+    color:#e8cc91;
+    margin-top:5px;
+}
+
+/* =========================
+   MUHURTHAM
+========================= */
+
+.muhurtham{
+    max-width:600px;
+    margin:25px auto;
+    padding:30px;
+    border-top:2px solid #d8a93f;
+    border-bottom:2px solid #d8a93f;
+    background:rgba(0,0,0,.15);
+}
+
+.time{
+    font-size:30px;
+    color:#ffe18a;
+    margin-top:15px;
+}
+
+/* =========================
+   SAPTAPADI
+========================= */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:25px;
+}
+
+.step{
+    border:1px solid #c59b3d;
+    border-radius:12px;
+    padding:14px 5px;
+    background:rgba(255,200,60,.05);
+}
+
+.step strong{
+    display:block;
+    font-size:24px;
+    color:#ffd45d;
+}
+
+.step span{
+    font-family:'Noto Serif Telugu';
+    font-size:14px;
+}
+
+/* =========================
+   SHLOKA
+========================= */
+
+.shloka{
+    max-width:700px;
+    margin:20px auto;
+    padding:25px;
+    border:1px solid #c89c3b;
+    border-radius:15px;
+    background:rgba(0,0,0,.18);
+}
+
+.shloka p{
+    font-family:'Noto Serif Telugu';
+    font-size:20px;
+    line-height:2;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.controls{
+    position:fixed;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:20;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.control{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    border:1px solid #d6a63d;
+    background:#560706;
+    color:#ffd768;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.dots{
+    display:flex;
+    gap:6px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#806126;
+    transition:.3s;
+}
+
+.dot.active{
+    width:25px;
+    border-radius:10px;
+    background:#e1b348;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-heart{
+    font-size:65px;
+    animation:heart 1.2s infinite alternate;
+}
+
+@keyframes heart{
+    to{
+        transform:scale(1.12);
+    }
+}
+
+.footer{
+    font-family:'Noto Serif Telugu';
+    line-height:2;
+    font-size:19px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .content{
+        width:90%;
+        padding:15px;
+    }
+
+    .om{
+        font-size:65px;
+    }
+
+    .heading{
+        font-size:32px;
+    }
+
+    .subheading{
+        font-size:20px;
+    }
+
+    .couple-name{
+        font-size:40px;
+    }
+
+    .photo{
+        height:290px;
+    }
+
+    .date{
+        font-size:32px;
+        letter-spacing:4px;
+    }
+
+    .location{
+        font-size:21px;
+    }
+
+    .tradition-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .tradition-card{
+        min-height:120px;
+        padding:12px 5px;
+    }
+
+    .tradition-card .icon{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="slider">
+
+<!-- =========================================
+     SLIDE 1 — OPENING
+========================================= -->
+
+<section class="slide active opening">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="toran">🌿🌿🌿🌿🌿</div>
+
+<div class="om">ॐ</div>
+
+<div class="ganesha">🐘</div>
+
+<div class="bells">🔔 🔔 🔔</div>
+
+<div class="ornament">❈ ✦ ❈</div>
+
+<div class="small telugu">
+॥ శ్రీ గణేశాయ నమః ॥
+</div>
+
+<h1 class="heading">
+శుభమస్తు
+</h1>
+
+<p class="welcome telugu">
+శ్రీ అన్నవరం సత్యనారాయణ స్వామి వారి<br>
+దివ్య ఆశీస్సులతో
+</p>
+
+<p class="small">
+A sacred beginning to a beautiful forever...
+</p>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 2 — COUPLE
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="toran">🌿 🪷 🌿 🪷 🌿</div>
+
+<p class="small telugu">
+శుభ వివాహ ఆహ్వానం
+</p>
+
+<div class="couple-name">
+Rasmika Mandhana
+</div>
+
+<div class="and">&</div>
+
+<div class="couple-name">
+Vijay Deverakonda
+</div>
+
+<div class="virosh">
+✨ VIROSH ✨
+</div>
+
+<div class="ornament">
+❈ 💍 ❈
+</div>
+
+<p class="small telugu">
+రెండు మనసులు • ఒక బంధం • ఒక అందమైన ప్రయాణం
+</p>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 3 — WEDDING DATE
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="ganesha">🪔</div>
+
+<h1 class="heading telugu">
+మంగళ వివాహ మహోత్సవం
+</h1>
+
+<div class="ornament">
+❈ ━━━━━ ❈
+</div>
+
+<div class="date">
+30 • 12 • 27
+</div>
+
+<div class="location">
+శ్రీ అన్నవరం సత్యనారాయణ స్వామి వారి సన్నిధిలో
+</div>
+
+<p class="small">
+ANNAVARAM TEMPLE<br>
+ANDHRA PRADESH
+</p>
+
+<div class="bells">
+🔔 🪔 🔔
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 4 — NADASWARAM / WEDDING
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<h1 class="heading telugu">
+మంగళ వాద్యాలు
+</h1>
+
+<div style="font-size:100px;margin:20px;">
+🎺
+</div>
+
+<h2 class="subheading telugu">
+నాదస్వర మంగళ ధ్వనులతో
+</h2>
+
+<p class="small telugu">
+మంగళ తాళాలు మ్రోగగా<br>
+దేవతల ఆశీస్సుల మధ్య<br>
+శుభ ముహూర్తంలో<br>
+వివాహ వేడుక జరుగును.
+</p>
+
+<div class="ornament">
+🪔 ❈ 🔔 ❈ 🪔
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 5 — TELUGU TRADITIONS
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<h1 class="heading telugu">
+మన తెలుగు వివాహ సంప్రదాయాలు
+</h1>
+
+<div class="tradition-grid">
+
+<div class="tradition-card">
+<div class="icon">🐘</div>
+<h3>వినాయక పూజ</h3>
+<p>విఘ్నాలు తొలగించి శుభారంభం</p>
+</div>
+
+<div class="tradition-card">
+<div class="icon">🥥</div>
+<h3>కాశీ యాత్ర</h3>
+<p>సంప్రదాయమైన సరదా ఘట్టం</p>
+</div>
+
+<div class="tradition-card">
+<div class="icon">🌿</div>
+<h3>జీలకర్ర బెల్లం</h3>
+<p>ఒకటైన రెండు హృదయాలు</p>
+</div>
+
+<div class="tradition-card">
+<div class="icon">🌾</div>
+<h3>తలంబ్రాలు</h3>
+<p>సంతోషం మరియు శ్రేయస్సు</p>
+</div>
+
+<div class="tradition-card">
+<div class="icon">💍</div>
+<h3>మాంగల్య ధారణ</h3>
+<p>పవిత్రమైన జీవిత బంధం</p>
+</div>
+
+<div class="tradition-card">
+<div class="icon">🔥</div>
+<h3>సప్తపది</h3>
+<p>ఏడు అడుగులు — జీవితాంతం తోడు</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 6 — JEELAKARRA BELLAM
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div style="font-size:75px;">
+🌿
+</div>
+
+<h1 class="heading telugu">
+జీలకర్ర బెల్లం
+</h1>
+
+<div class="ornament">
+❈ 💛 ❈
+</div>
+
+<p class="subheading telugu">
+"ఇకపై రెండు మనసులు ఒకటే"
+</p>
+
+<p class="small telugu">
+జీలకర్ర బెల్లం తలపై ఉంచుకొని<br>
+పరస్పర ప్రేమ, విశ్వాసం, అనురాగంతో<br>
+కొత్త జీవితానికి అడుగులు వేయు శుభ ఘట్టం.
+</p>
+
+<div style="font-size:45px;margin:20px;">
+🪔 🌺 🪔
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 7 — TALAMBRALU
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div style="font-size:70px;">
+🌾
+</div>
+
+<h1 class="heading telugu">
+తలంబ్రాల వేడుక
+</h1>
+
+<div class="ornament">
+❈ 🌾 ❈ 🌾 ❈
+</div>
+
+<p class="subheading telugu">
+సిరులు • సంతోషాలు • సంపదలు
+</p>
+
+<p class="small telugu">
+బంగారు తలంబ్రాలతో<br>
+ఒకరిపై ఒకరు ఆశీర్వాదాలను కురిపిస్తూ<br>
+నవ్వులతో నిండిన మధుర క్షణాలు.
+</p>
+
+<div style="font-size:45px;margin:20px;">
+🌾 ❤️ 🌾
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 8 — SAPTAPADI
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<h1 class="heading telugu">
+సప్తపది
+</h1>
+
+<p class="small telugu">
+ఏడు అడుగులు • ఏడు వాగ్దానాలు • ఒక జీవితం
+</p>
+
+<div class="steps">
+
+<div class="step">
+<strong>1</strong>
+<span>ఆహారం</span>
+</div>
+
+<div class="step">
+<strong>2</strong>
+<span>బలం</span>
+</div>
+
+<div class="step">
+<strong>3</strong>
+<span>సంపద</span>
+</div>
+
+<div class="step">
+<strong>4</strong>
+<span>సుఖం</span>
+</div>
+
+<div class="step">
+<strong>5</strong>
+<span>సంతానం</span>
+</div>
+
+<div class="step">
+<strong>6</strong>
+<span>ఆరోగ్యం</span>
+</div>
+
+<div class="step">
+<strong>7</strong>
+<span>స్నేహం</span>
+</div>
+
+<div class="step">
+<strong>∞</strong>
+<span>శాశ్వత బంధం</span>
+</div>
+
+</div>
+
+<div class="ornament">
+🔥 🪔 🔥
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 9 — MUHURTHAM
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<h1 class="heading telugu">
+శుభ ముహూర్తం
+</h1>
+
+<div class="muhurtham">
+
+<div style="font-size:65px;">
+🪔
+</div>
+
+<div class="date">
+30 • 12 • 27
+</div>
+
+<div class="time">
+శుభ ముహూర్త సమయం
+</div>
+
+<p class="small telugu" style="margin-top:15px;">
+శుభ లగ్నంలో<br>
+మాంగల్య ధారణతో<br>
+నూతన జీవితానికి శ్రీకారం
+</p>
+
+</div>
+
+<div class="bells">
+🔔 🔔 🔔
+</div>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 10 — SHLOKA
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="om">ॐ</div>
+
+<h1 class="heading telugu">
+మంగళ శ్లోకం
+</h1>
+
+<div class="shloka">
+
+<p>
+సర్వే భవంతు సుఖినః<br>
+సర్వే సంతు నిరామయాః<br>
+సర్వే భద్రాణి పశ్యంతు<br>
+మా కశ్చిద్ దుఃఖ భాగ్భవేత్ ॥
+</p>
+
+</div>
+
+<div class="ornament">
+❈ 🪷 ❈
+</div>
+
+<p class="small telugu">
+అందరి జీవితాల్లో సుఖ సంతోషాలు<br>
+శాంతి శ్రేయస్సులు నిండాలని కోరుకుంటూ...
+</p>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 11 — INVITATION
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="ganesha">🐘</div>
+
+<h1 class="heading telugu">
+మీ రాకే మా ఆశీర్వాదం
+</h1>
+
+<div class="ornament">
+❈ ━━━━━ ❈
+</div>
+
+<p class="subheading telugu">
+మా ఆనందాన్ని మీతో పంచుకోవాలని<br>
+మనస్ఫూర్తిగా ఆహ్వానిస్తున్నాము.
+</p>
+
+<div class="couple-name">
+Rasmika
+</div>
+
+<div class="and">❤️</div>
+
+<div class="couple-name">
+Vijay
+</div>
+
+<div class="virosh">
+VIROSH
+</div>
+
+<div class="ornament">
+🪔 🌺 🪔 🌺 🪔
+</div>
+
+<p class="small">
+30 • 12 • 27<br>
+ANNAVARAM TEMPLE
+</p>
+
+</div>
+</section>
+
+
+<!-- =========================================
+     SLIDE 12 — FINAL
+========================================= -->
+
+<section class="slide">
+<div class="bg"></div>
+
+<div class="content">
+
+<div class="final-heart">
+❤️
+</div>
+
+<div class="toran">
+🌿 🪷 🌿
+</div>
+
+<h1 class="heading">
+VIROSH
+</h1>
+
+<p class="subheading telugu">
+రెండు హృదయాలు<br>
+ఒక పవిత్రమైన బంధం
+</p>
+
+<div class="ornament">
+❈ ✦ ❈ ✦ ❈
+</div>
+
+<p class="footer telugu">
+శుభమస్తు<br>
+మంగళమస్తు<br>
+కళ్యాణమస్తు
+</p>
+
+<div style="font-size:50px;margin-top:20px;">
+🪔 🪔 🪔
+</div>
+
+<p class="small">
+Forever begins here...
+</p>
+
+</div>
+</section>
+
+</div>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<div class="controls">
+
+<button class="control" onclick="previousSlide()">‹</button>
+
+<div class="dots" id="dots"></div>
+
+<button class="control" onclick="nextSlide()">›</button>
+
+</div>
+
+
+<script>
+
+let current=0;
+
+const slides=document.querySelectorAll(".slide");
+
+const dots=document.getElementById("dots");
+
+slides.forEach((_,i)=>{
+
+    const dot=document.createElement("div");
+
+    dot.className="dot";
+
+    if(i===0) dot.classList.add("active");
+
+    dot.onclick=()=>{
+        current=i;
+        showSlide(current);
+    };
+
+    dots.appendChild(dot);
+});
+
+function showSlide(index){
+
+    slides.forEach((slide,i)=>{
+        slide.classList.toggle("active",i===index);
+    });
+
+    document.querySelectorAll(".dot").forEach((dot,i)=>{
+        dot.classList.toggle("active",i===index);
+    });
+}
+
+function nextSlide(){
+
+    current++;
+
+    if(current>=slides.length){
+        current=0;
+    }
+
+    showSlide(current);
+}
+
+function previousSlide(){
+
+    current--;
+
+    if(current<0){
+        current=slides.length-1;
+    }
+
+    showSlide(current);
+}
+
+
+/* KEYBOARD */
+
+document.addEventListener("keydown",e=>{
+
+    if(e.key==="ArrowRight" || e.key===" "){
+        nextSlide();
+    }
+
+    if(e.key==="ArrowLeft"){
+        previousSlide();
+    }
+
+});
+
+
+/* TOUCH SWIPE */
+
+let touchStart=0;
+
+document.addEventListener("touchstart",e=>{
+    touchStart=e.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend",e=>{
+
+    let touchEnd=e.changedTouches[0].screenX;
+
+    if(touchStart-touchEnd>50){
+        nextSlide();
+    }
+
+    if(touchEnd-touchStart>50){
+        previousSlide();
+    }
+
+});
+
+
+/* FALLING FLOWERS */
+
+const flowers=["🌸","🌺","🌼","🪷","🌹"];
+
+for(let i=0;i<25;i++){
+
+    const flower=document.createElement("div");
+
+    flower.className="flower";
+
+    flower.innerHTML=
+        flowers[Math.floor(Math.random()*flowers.length)];
+
+    flower.style.left=Math.random()*100+"%";
+
+    flower.style.animationDuration=
+        (6+Math.random()*8)+"s";
+
+    flower.style.animationDelay=
+        Math.random()*8+"s";
+
+    flower.style.fontSize=
+        (15+Math.random()*15)+"px";
+
+    document.querySelector(".slider").appendChild(flower);
+}
+
+
+/* AUTO SLIDE */
+
+let autoSlide=setInterval(nextSlide,9000);
+
+document.addEventListener("click",()=>{
+    clearInterval(autoSlide);
+    autoSlide=setInterval(nextSlide,9000);
+});
+
+</script>
+
+</body>
+</html>
+```
